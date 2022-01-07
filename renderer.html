@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Playwright and onBeforeRequest</h1>
+    <script type="text/javascript">
+      window.onload = function () {
+        setTimeout(function () {
+          fetch("https://test/foo")
+            .then((response) => console.log("Response:", response.status))
+            .catch(console.error);
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>
