@@ -1,5 +1,7 @@
 # Reproduction of an issue with Playwright and onBeforeRequest
 
+Reported to microsoft/playwright: https://github.com/microsoft/playwright/issues/11246
+
 It seems like if `electron.session.defaultSession.webRequest.onBeforeRequest()`
 is used for any URLs, mocked HTTP responses using Playwright's `page.route()`
 have status `0` for every URL. It's expected that status should be `200` or as
